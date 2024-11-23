@@ -5,20 +5,20 @@ from post_generator import generate_post
 
 # Options for length and language
 length_options = ["Short", "Medium", "Long"]
-language_options = ["English", "Hinglish"]
+language_options = ["English", "Hinglish","Tanglish"]
 
 
-# Main app layout
+# Main app
 def main():
-    st.subheader("LinkedIn Post Generator: Codebasics")
+    st.subheader("LinkedIn Post Generator")
 
-    # Create three columns for the dropdowns
+    # Create three columns
     col1, col2, col3 = st.columns(3)
 
     fs = FewShotPosts()
     tags = fs.get_tags()
     with col1:
-        # Dropdown for Topic (Tags)
+        # Dropdown for Topic
         selected_tag = st.selectbox("Topic", options=tags)
 
     with col2:
